@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Tarea2</string>
+    <string name="menu_comida">Restaurante la capusha</string>
+    <string-array name="delegaciones_array">
+        <item>Álvaro Obregón</item>
+        <item>Azcapotzalco</item>
+        <item>Benito Juárez</item>
+        <item>Coyoacán</item>
+        <item>Cuajimalpa de Morelos</item>
+        <item>Cuauhtémoc</item>
+        <item>Gustavo A. Madero</item>
+        <item>Iztacalco</item>
+        <item>Iztapalapa</item>
+        <item>La Magdalena Contreras</item>
+        <item>Milpa Alta</item>
+        <item>Tláhuac</item>
+        <item>Tlalpan</item>
+        <item>Venustiano Carranza</item>
+        <item>Xochimilco</item>
+        <item>Miguel Hidalgo</item>
+    </string-array>
+
+</resources>

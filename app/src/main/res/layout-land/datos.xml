@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+    <ImageView
+        android:id="@+id/capusha"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/yogoso"
+        android:layout_alignStart="@+id/tituloentrega"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginEnd="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tituloentrega"
+        android:text="Ingresa tu dirección de entrega"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:background="@color/purple_500"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"/>
+
+    <EditText
+        android:id="@+id/calle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Calle"
+        android:padding="12dp"
+        android:layout_below="@id/tituloentrega"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/numberEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Número"
+        android:inputType="number"
+        android:padding="12dp"
+        android:layout_below="@id/calle"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/colonia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Colonia"
+        android:padding="12dp"
+        android:layout_below="@id/numberEditText"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/delegacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecciona la delegación"
+        android:textSize="18sp"
+        android:layout_below="@id/colonia"
+        android:layout_marginTop="16dp"/>
+
+    <Spinner
+        android:id="@+id/delegationSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:entries="@array/delegaciones_array"
+        android:layout_below="@id/delegacion"
+        android:layout_marginTop="8dp"/>
+
+
+    <EditText
+        android:id="@+id/codigo_postal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Código Postal"
+        android:inputType="number"
+        android:maxLength="5"
+        android:padding="12dp"
+        android:layout_below="@id/delegationSpinner"
+        android:layout_marginTop="16dp"/>
+
+
+    <Button
+        android:id="@+id/continueButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continuar"
+        android:textColor="#FFFFFF"
+        android:background="@color/purple_500"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"/>
+</RelativeLayout>
