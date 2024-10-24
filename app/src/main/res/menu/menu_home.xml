@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".HomeActivity">
+
+
+    <item
+        android:id="@+id/cancelar_pedido"
+        android:icon="@drawable/capusha"
+        android:orderInCategory="1"
+        android:title="@string/cancelar_pedido" />
+
+    <item
+        android:id="@+id/action_share"
+        android:icon="@android:drawable/ic_menu_share"
+        android:orderInCategory="2"
+        android:title="qu es?" />
+
+    <item
+        android:id="@+id/algo"
+        android:orderInCategory="1"
+        android:title="algo" />
+
+</menu>

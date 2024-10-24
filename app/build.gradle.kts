@@ -32,7 +32,8 @@ android {
 }
 
 dependencies {
-
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("androidx.core:core-ktx:1.10.1")
     implementation(libs.appcompat)
     implementation(libs.material)
     testImplementation(libs.junit)
