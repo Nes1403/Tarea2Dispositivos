@@ -27,10 +27,10 @@ public class MenuActividad extends AppCompatActivity {
 
 
         //Pantalla 1
-        //creaMenu();
+        creaMenu();
 
         //Pantalla 2
-        setContentView(R.layout.datos);
+        //setContentView(R.layout.datos);
 
         mMenuSections = getResources().getStringArray(com.example.tarea2.R.array.menu_items);
         mDrawerLayout = (DrawerLayout) findViewById(com.example.tarea2.R.id.drawer_layout);
