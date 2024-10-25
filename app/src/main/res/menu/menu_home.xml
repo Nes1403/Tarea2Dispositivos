@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".HomeActivity">
 
+    <item
+        android:id="@+id/action_cart"
+        android:icon="@drawable/ic_cart"
+        android:title="@string/carrito"
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/cancelar_pedido"
@@ -14,11 +20,11 @@
         android:id="@+id/action_share"
         android:icon="@android:drawable/ic_menu_share"
         android:orderInCategory="2"
-        android:title="qu es?" />
+        android:title="@string/perfil" />
 
     <item
-        android:id="@+id/algo"
-        android:orderInCategory="1"
-        android:title="algo" />
+        android:id="@+id/comYsug"
+        android:orderInCategory="3"
+        android:title="@string/comentarios_y_sugerencias" />
 
 </menu>

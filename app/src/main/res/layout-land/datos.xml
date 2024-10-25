@@ -1,101 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
-
-    <ImageView
-        android:id="@+id/capusha"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/yogoso"
-        android:layout_alignStart="@+id/tituloentrega"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginEnd="16dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tituloentrega"
-        android:text="Ingresa tu dirección de entrega"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:background="@color/purple_500"
-        android:layout_marginBottom="16dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerVertical="true"
-        android:layout_alignParentRight="true"/>
-
-    <EditText
-        android:id="@+id/calle"
+    <!-- Contenido principal -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Calle"
-        android:padding="12dp"
-        android:layout_below="@id/tituloentrega"
-        android:layout_marginTop="8dp"/>
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/numberEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Número"
-        android:inputType="number"
-        android:padding="12dp"
-        android:layout_below="@id/calle"
-        android:layout_marginTop="8dp"/>
-
-    <EditText
-        android:id="@+id/colonia"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Colonia"
-        android:padding="12dp"
-        android:layout_below="@id/numberEditText"
-        android:layout_marginTop="8dp"/>
-
-    <TextView
-        android:id="@+id/delegacion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Selecciona la delegación"
-        android:textSize="18sp"
-        android:layout_below="@id/colonia"
-        android:layout_marginTop="16dp"/>
-
-    <Spinner
-        android:id="@+id/delegationSpinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="12dp"
-        android:entries="@array/delegaciones_array"
-        android:layout_below="@id/delegacion"
-        android:layout_marginTop="8dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
 
 
-    <EditText
-        android:id="@+id/codigo_postal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Código Postal"
-        android:inputType="number"
-        android:maxLength="5"
-        android:padding="12dp"
-        android:layout_below="@id/delegationSpinner"
-        android:layout_marginTop="16dp"/>
+            <ImageView
+                android:id="@+id/capusha"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/yogoso"
+                android:layout_alignStart="@+id/tituloentrega"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tituloentrega"
+                android:text="@string/ingresa_tu_direcci_n_de_entrega"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:background="@color/purple_500"
+                android:layout_marginBottom="16dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"/>
+
+            <EditText
+                android:id="@+id/calle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/calle"
+                android:padding="12dp"
+                android:layout_below="@id/tituloentrega"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/numberEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/n_mero"
+                android:inputType="number"
+                android:padding="12dp"
+                android:layout_below="@id/calle"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/colonia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/colonia"
+                android:padding="12dp"
+                android:layout_below="@id/numberEditText"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/delegacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/selecciona_la_delegaci_n"
+                android:textSize="18sp"
+                android:layout_below="@id/colonia"
+                android:layout_marginTop="16dp"/>
+
+            <Spinner
+                android:id="@+id/delegationSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:entries="@array/delegaciones_array"
+                android:layout_below="@id/delegacion"
+                android:layout_marginTop="8dp"/>
 
 
-    <Button
-        android:id="@+id/continueButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Continuar"
-        android:textColor="#FFFFFF"
-        android:background="@color/purple_500"
-        android:padding="12dp"
-        android:textSize="16sp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="16dp"/>
-</RelativeLayout>
+            <EditText
+                android:id="@+id/codigo_postal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/c_digo_postal"
+                android:inputType="number"
+                android:maxLength="5"
+                android:padding="12dp"
+                android:layout_below="@id/delegationSpinner"
+                android:layout_marginTop="16dp"/>
+
+
+            <Button
+                android:id="@+id/continueButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/continuar"
+                android:textColor="#FFFFFF"
+                android:background="@color/purple_500"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="16dp"/>
+        </RelativeLayout>
+    </ScrollView>
+    <!-- Menú -->
+    <ListView
+        android:id="@+id/left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:showDividers="middle"
+        android:dividerHeight="1dp"
+        android:background="#FFF" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
+

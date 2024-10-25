@@ -1,9 +1,24 @@
 <resources>
-    <string name="app_name">Restaurante de la capusha</string>
-    <string name="menu_comida">Restaurante la capusha</string>
+    <string name="app_name">Restaurante La capusha</string>
+    <string name="menu_comida">Restaurante La capusha</string>
     <string name="cancelar_pedido">Cancelar Pedido</string>
     <string name="DrawerOpen">NavigationDrawerOpen</string>
     <string name="DrawerClosed">NavigationDrawerClosed</string>
+    <string name="comentarios_y_sugerencias">Comentarios y sugerencias</string>
+    <string name="perfil">Perfil</string>
+    <string name="carrito">Carrito</string>
+    <string name="ir_a_direcci_n_de_entrega">Ir a Dirección de Entrega</string>
+    <string name="imagen_del_producto">Imagen del Producto</string>
+    <string name="t_tulo_del_producto">Título del Producto</string>
+    <string name="descripci_n_del_producto">Descripción del Producto</string>
+    <string name="precio_0_00">Precio: $0.00</string>
+    <string name="c_digo_postal">Código Postal</string>
+    <string name="continuar">Continuar</string>
+    <string name="selecciona_la_delegaci_n">Selecciona la delegación</string>
+    <string name="colonia">Colonia</string>
+    <string name="n_mero">Número</string>
+    <string name="calle">Calle</string>
+    <string name="ingresa_tu_direcci_n_de_entrega">Ingresa tu dirección de entrega</string>
     <string-array name="delegaciones_array">
         <item>Álvaro Obregón</item>
         <item>Azcapotzalco</item>
@@ -24,11 +39,10 @@
     </string-array>
 
     <string-array name="menu_items">
-        <item>Sección 1</item>
-        <item>Sección 2</item>
-        <item>Sección 3</item>
-        <item>Sección 4</item>
-        <item>Sección 5</item>
+        <item>Inicio</item>
+        <item>Historial de pedidos</item>
+        <item>Ofertas</item>
+        <item>Métodos de pago</item>
+        <item>Cerrar sesión</item>
     </string-array>
-
 </resources>

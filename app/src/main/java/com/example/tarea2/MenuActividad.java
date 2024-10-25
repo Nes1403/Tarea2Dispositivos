@@ -24,8 +24,13 @@ public class MenuActividad extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        creaMenu();
-        //setContentView(R.layout.datos);
+
+
+        //Pantalla 1
+        //creaMenu();
+
+        //Pantalla 2
+        setContentView(R.layout.datos);
 
         mMenuSections = getResources().getStringArray(com.example.tarea2.R.array.menu_items);
         mDrawerLayout = (DrawerLayout) findViewById(com.example.tarea2.R.id.drawer_layout);
@@ -91,10 +96,13 @@ public class MenuActividad extends AppCompatActivity {
             Log.d("HomeActivity", "Cancelar Pedido");
             return true;
         } else if (id == R.id.action_share) {
-            Log.d("HomeActivity", "action_share");
+            Log.d("HomeActivity", "perfil");
             return true;
-        } else if (id == R.id.algo) {
-            Log.d("HomeActivity", "algo");
+        } else if (id == R.id.comYsug) {
+            Log.d("HomeActivity", "comentarios y sugerencias");
+            return true;
+        }else if (id == R.id.action_cart) {
+            Log.d("HomeActivity", "Carrito de compras");
             return true;
         }
         return super.onOptionsItemSelected(item);
