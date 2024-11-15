@@ -1,23 +1,28 @@
 package com.example.tarea2;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
-import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 
 
-import java.util.ArrayList;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
-public class MenuActividad extends AppCompatActivity {
+import com.example.tarea2.Item;
+import com.example.tarea2.ItemAdapter;
+import com.example.tarea2.R;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class DatosActividad extends AppCompatActivity {
 
     private ArrayList<Item> menuItems;
     private String[] mMenuSections;
@@ -28,8 +33,19 @@ public class MenuActividad extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        creaMenu();
+        setContentView(R.layout.datos);
+        Intent intent = getIntent();
+        menuItems = intent.getParcelableArrayListExtra("miLista");
+        Iterator<Item> iterator = menuItems.iterator();
+        while (iterator.hasNext()) {
+            Item item = iterator.next();
+            if (!item.isChecked()) {
+                iterator.remove();
+            }
+        }
+        ItemAdapterConf adapter = new ItemAdapterConf(this, R.layout.item_menu_conf, menuItems);
+        ListView listView = findViewById(R.id.listViewMenuConf);
+        listView.setAdapter(adapter);
 
         mMenuSections = getResources().getStringArray(com.example.tarea2.R.array.menu_items);
         mDrawerLayout = (DrawerLayout) findViewById(com.example.tarea2.R.id.drawer_layout);
@@ -54,7 +70,7 @@ public class MenuActividad extends AppCompatActivity {
             }
         };
 
-        mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
+        mDrawerList.setOnItemClickListener(new com.example.tarea2.MenuActividad.DrawerItemClickListener());
 
         // Set the drawer toggle as the DrawerListener
         mDrawerLayout.setDrawerListener(mDrawerToggle);
@@ -69,15 +85,7 @@ public class MenuActividad extends AppCompatActivity {
 
     }
 
-    public static class DrawerItemClickListener implements
-            ListView.OnItemClickListener {
-        @Override
-        public void onItemClick(AdapterView parent,
-                                View view, int position, long id) {
-            Log.d("HomeActivity",
-                    (String) parent.getAdapter().getItem(position));
-        }
-    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -107,39 +115,4 @@ public class MenuActividad extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void creaMenu(){
-        setContentView(R.layout.menu_layout);
-
-        Button botonEntrega = findViewById(R.id.botonentrega);
-
-        botonEntrega.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                goToNextActivity();
-            }
-        });
-
-        menuItems = new ArrayList<>();
-        menuItems.add(new Item(R.drawable.burger, "Hamburguesa", "Deliciosa hamburguesa con queso", 120, false));
-        menuItems.add(new Item(R.drawable.pepsi, "Refresco", "lata de refresco de 355ml", 40, false));
-        menuItems.add(new Item(R.drawable.papas, "Papas Fritas", "Crocantes papas fritas", 50, false));
-        menuItems.add(new Item(R.drawable.alitas, "Alitas BBQ", "Deliciosas alitas, 8 pzs", 160, false));
-        menuItems.add(new Item(R.drawable.boneless, "Bonles BBQ", "Deliciosos Boneless, 8 pzs", 180, false));
-        menuItems.add(new Item(R.drawable.pizza, "Pizza de peperoni", "Deliciosa pizza grande de peperoni", 190, false));
-        menuItems.add(new Item(R.drawable.hotdogs, "Hotdog", "Delicioso Hot Dog con papas ", 50, false));
-        menuItems.add(new Item(R.drawable.chilaquiles, "Chilaquiles verdes", "Deliciosos chilaquiles", 70, false));
-
-        ItemAdapter adapter = new ItemAdapter(this, R.layout.item_menu, menuItems);
-        ListView listView = findViewById(R.id.listViewMenu);
-        listView.setAdapter(adapter);
-    }
-
-
-    private void goToNextActivity() {
-        Intent intent = new Intent(MenuActividad.this, DatosActividad.class);
-        intent.putParcelableArrayListExtra("miLista", menuItems);
-        startActivity(intent);
-    }
 }
-
-
