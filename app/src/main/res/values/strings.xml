@@ -19,6 +19,7 @@
     <string name="n_mero">Número</string>
     <string name="calle">Calle</string>
     <string name="ingresa_tu_direcci_n_de_entrega">Ingresa tu dirección de entrega</string>
+    <string name="menu_princiapl">Menu Princiapl</string>
     <string-array name="delegaciones_array">
         <item>Álvaro Obregón</item>
         <item>Azcapotzalco</item>

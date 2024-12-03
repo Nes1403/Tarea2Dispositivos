@@ -1,0 +1,32 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txtCalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calle" />
+
+    <TextView
+        android:id="@+id/txtNumero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Número" />
+
+    <TextView
+        android:id="@+id/txtColonia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Colonia" />
+
+    <TextView
+        android:id="@+id/txtItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Items"
+        android:paddingTop="8dp" />
+</LinearLayout>

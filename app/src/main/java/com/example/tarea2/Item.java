@@ -3,11 +3,14 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Item implements Parcelable {
+    private int id;
     private int imageResId;
     private String title;
     private String description;
     private double price;
     private boolean isChecked;
+
+    public Item(){}
 
     public Item(int imageResId, String title, String description, double price, boolean isChecked) {
         this.imageResId = imageResId;
@@ -50,20 +53,44 @@ public class Item implements Parcelable {
         }
     };
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int n){
+        id=n;
+    }
+
     public int getImageResId() {
         return imageResId;
+    }
+
+    public void setImageResId(int imageResId) {
+        this.imageResId = imageResId;
     }
 
     public String getTitle() {
         return title;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public String getDescription() {
         return description;
     }
 
+    public void setDescription(String d){
+        description= d;
+    }
+
     public double getPrice() {
         return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public boolean isChecked() {

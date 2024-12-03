@@ -69,13 +69,32 @@ public class MenuActividad extends AppCompatActivity {
 
     }
 
-    public static class DrawerItemClickListener implements
+    public class DrawerItemClickListener implements
             ListView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView parent,
                                 View view, int position, long id) {
-            Log.d("HomeActivity",
-                    (String) parent.getAdapter().getItem(position));
+            switch (position) {
+                case 0:
+                    Log.d("HomeActivity", "Inicio");
+                    break;
+                case 1:
+                    Log.d("HomeActivity", "Histroial de pedidos");
+                    Intent intent = new Intent(MenuActividad.this, HistorialPedidos.class);
+                    startActivity(intent);
+                    break;
+                case 2:
+                    Log.d("HomeActivity", "Ofertas");
+                    break;
+                case 3:
+                    Log.d("HomeActivity", "Metodos de pago");
+                    break;
+                case 4:
+                    Log.d("HomeActivity", "Cerrar sesion");
+                    break;
+                default:
+                    Log.d("HomeActivity", "caso default");
+            }
         }
     }
 

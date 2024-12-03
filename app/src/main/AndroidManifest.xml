@@ -25,6 +25,8 @@
 
         <activity android:name=".DatosActividad"/>
 
+        <activity android:name=".HistorialPedidos"/>
+
 
     </application>
 
